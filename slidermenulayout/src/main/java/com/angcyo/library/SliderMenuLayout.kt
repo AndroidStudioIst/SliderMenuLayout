@@ -99,9 +99,10 @@ class SliderMenuLayout(context: Context, attributeSet: AttributeSet? = null)
 
             if (needInterceptTouchEvent) {
                 if (isTouchDownInContentWithMenuOpen &&
+                        ((touchEventX - touchDownX) == 0f) ||
                         (touchEventY - touchDownY).abs() > (touchEventX - touchDownX).abs()) {
                     if (event.x >= maxMenuWidth) {
-                        //在菜单打开的情况下,点击了内容区域
+                        //在菜单打开的情况下,点击了内容区域, 并且没有触发横向滚动
                         closeMenu()
                     } else {
                         resetLayout()
