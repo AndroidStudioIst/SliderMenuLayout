@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SliderMenuLayout">
+        <!--这个值 乘以 父控件的宽度,就是菜单布局的宽度-->
+        <attr name="r_menu_max_width" format="float"/>
+    </declare-styleable>
+</resources>
